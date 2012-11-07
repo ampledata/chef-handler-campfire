@@ -37,7 +37,7 @@ class Chef
                  end
 
           room.speak([node.hostname, run_status.formatted_exception].join(' '))
-          room.paste(Array(backtrace).join('\n'))
+          room.paste(Array(backtrace).join("\n"))
         end
       end
     end
