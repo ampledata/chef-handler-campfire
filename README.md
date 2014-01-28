@@ -16,39 +16,8 @@ Cookbook.
 **ROOM** and Subdomain as **SUBDOMAIN**, add a Recipe similar to the example 
 below:
 
-For 10.x chef:
 
-```ruby
-include_recipe 'chef_handler'
-
-chef_gem "faraday" do
-  action :install
-  version "0.8.9"
-end
-
-chef_gem "faraday_middleware" do
-  action :install
-  version "0.8.8"
-end
-
-chef_gem "tinder" do
-  action :install
-  version "1.9.1"
-end
-
-chef_gem "chef-handler-campfire" do
-  action :install
-end
-
-chef_handler 'Chef::Handler::Campfire' do
-  action :enable
-  arguments [ 'SUBDOMAIN', 'TOKEN' , 'ROOM' ]
-  source File.join(Gem.all_load_paths.grep(/chef-handler-campfire/).first,
-                   'chef', 'handler', 'campfire.rb')
-end
-```
-
-For 11.x chef:
+For 11.8.x chef:
 
 ```ruby
 include_recipe 'chef_handler'
