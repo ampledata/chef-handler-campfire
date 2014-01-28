@@ -19,22 +19,22 @@ below:
 ```ruby
 include_recipe 'chef_handler'
 
-gem_package "faraday" do
+chef_gem "faraday" do
   action :install
   version "0.8.9"
 end
 
-gem_package "faraday_middleware" do
+chef_gem "faraday_middleware" do
   action :install
   version "0.8.8"
 end
 
-gem_package "tinder" do
+chef_gem "tinder" do
   action :install
   version "1.9.1"
 end
 
-gem_package "chef-handler-campfire" do
+chef_gem "chef-handler-campfire" do
   action :install
 end
 
