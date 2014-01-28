@@ -19,7 +19,7 @@ below:
 ```ruby
 include_recipe 'chef_handler'
 
-ggem_package "faraday" do
+gem_package "faraday" do
   action :install
   version "0.8.9"
 end
