@@ -48,7 +48,7 @@ end
 
 There are new releases of `faraday` and `faraday_middleware` and they don't play nice with the new version of `tinder`. Also if you are having trouble figuring out the **ROOM** number, it's the number in the URL on your campfirenow.com address.
 
-See also: [Enable Chef Handler with LWRP](http://wiki.opscode.com/display/chef/Distributing+Chef+Handlers#DistributingChefHandlers-EnabletheChefHandlerwiththe%7B%7Bchefhandler%7D%7DLWRP)
+See also: [Chef Handlers](http://docs.opscode.com/essentials_handlers.html) on the Chef Doc site.
 
 
 Authors
@@ -56,6 +56,10 @@ Authors
 1. [Umang Chouhan](https://github.com/uchouhan) for the campfire gem.
 2. [Brain Scott](https://github.com/bscott) for the original campfire_handler gem.
 3. [Greg Albrecht](https://github.com/ampledata) for chef-handler-campfire gem.
+
+Contributor
+============
+1. [JJ Asghar](http://github.com/jjasghar) for updating Readme
 
 
 Copyright
