@@ -16,36 +16,8 @@ Cookbook.
 **ROOM** and Subdomain as **SUBDOMAIN**, add a Recipe similar to the example 
 below:
 
-
-For 11.8.x chef:
-
 ```ruby
 include_recipe 'chef_handler'
-
-chef_gem "faraday" do
-  action :install
-  version "0.8.9"
-end
-
-chef_gem "faraday_middleware" do
-  action :install
-  version "0.8.8"
-end
-
-chef_gem "hashie" do
-  action :install
-  version "1.1.0"
-end
-
-chef_gem "json" do
-  action :install
-  version "1.8.0"
-end
-
-chef_gem "tinder" do
-  action :install
-  version "1.4.3"
-end
 
 chef_gem "chef-handler-campfire" do
   action :install
@@ -59,7 +31,9 @@ chef_handler 'Chef::Handler::Campfire' do
 end
 ```
 
-There are new releases of `faraday` and `faraday_middleware` and they don't play nice with the new version of `tinder`. Also if you are having trouble figuring out the **ROOM** number, it's the number in the URL on your campfirenow.com address.
+It seems there is a `json` issue with `tinder`, the newest version of `chef` requires 1.7.7 where `tinder` requires 1.8.0. You'll need to do something like [this](https://gist.github.com/jjasghar/8695616). I'll keep an eye on this and remove this work around at a later date.
+
+Also if you are having trouble figuring out the **ROOM** number, it's the number in the URL on your campfirenow.com address.
 
 See also: [Chef Handlers](http://docs.opscode.com/essentials_handlers.html) on the Chef Doc site.
 
@@ -72,7 +46,7 @@ Authors
 
 Contributor
 ============
-1. [JJ Asghar](http://github.com/jjasghar) for updating Readme
+1. [JJ Asghar](http://github.com/jjasghar) for updating README.md
 
 
 Copyright
