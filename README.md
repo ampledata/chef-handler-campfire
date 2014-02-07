@@ -16,6 +16,8 @@ Cookbook.
 **ROOM** and Subdomain as **SUBDOMAIN**, add a Recipe similar to the example 
 below:
 
+Note this works with [chef 11.10](http://docs.opscode.com/release_notes.html#release-notes-chef-client-11-10-0)
+
 ```ruby
 include_recipe 'chef_handler'
 
@@ -30,8 +32,6 @@ chef_handler 'Chef::Handler::Campfire' do
                    'chef', 'handler', 'campfire.rb')
 end
 ```
-
-It seems there is a `json` issue with `tinder`, the newest version of `chef` requires 1.7.7 where `tinder` requires 1.8.0. You'll need to do something like [this](https://gist.github.com/jjasghar/8695616). I'll keep an eye on this and remove this work around at a later date.
 
 Also if you are having trouble figuring out the **ROOM** number, it's the number in the URL on your campfirenow.com address.
 
